@@ -25,15 +25,15 @@ public class IndexController {
         {
             return "redirect:/login";
         }
-        populateSortingCriteria(model);
+        populareCriteriiDeSortare(model);
         boolean isOperator = userLogat.isOperator();
         model.addAttribute("isOperator" , isOperator);
         model.addAttribute("username", userLogat.getUsername());
-        populateModelWithCars(model, brand, modelParametru, capacitateCilindrica);
+        populareModelCuMasini(model, brand, modelParametru, capacitateCilindrica);
             return "/index";
     }
 
-    private void populateModelWithCars(Model model, String brand, String modelParametru, Integer capacitateCilindrica) {
+    private void populareModelCuMasini(Model model, String brand, String modelParametru, Integer capacitateCilindrica) {
 
         List<Masina> masini;
 
@@ -53,7 +53,7 @@ public class IndexController {
         model.addAttribute("masini",masini);
     }
 
-    private void populateSortingCriteria(Model model) {
+    private void populareCriteriiDeSortare(Model model) {
         List<String> distinctBrands = masiniInterface.cautaBrandDistincte();
         List<String> distinctModels = masiniInterface.cautaModelDistinct();
         List<Integer> distinctCapacitateCilindrica = masiniInterface.cautaCapacitateCilindricaDistincta();

@@ -1,4 +1,4 @@
-package VladBudiu.proiectPj.Constants;
+package VladBudiu.proiectPj.Entities.Masini;
 
 public enum Culoare {
     ALB,

@@ -1,7 +1,5 @@
 package VladBudiu.proiectPj.Entities.Masini;
 
-import VladBudiu.proiectPj.Constants.Culoare;
-import VladBudiu.proiectPj.Constants.TipCombustibil;
 import VladBudiu.proiectPj.Entities.User.User;
 import jakarta.persistence.*;
 

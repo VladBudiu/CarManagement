@@ -97,24 +97,24 @@
             </table>
 
             <form th:action="@{/index}" method="get" style="margin-top: 20px; text-align: center;">
-                <label for="brandFilter">Filter by Brand:</label>
+                <label for="brandFilter">Filtreaza dupa Brand:</label>
                 <select id="brandFilter" name="brand">
-                    <option value="">All Brands</option>
+                    <option value="">Toate Brandurile</option>
                     <option th:each="brand : ${distinctBrands}" th:value="${brand}" th:text="${brand}"></option>
                 </select>
 
-                <label for="modelFilter">Filter by Model:</label>
+                <label for="modelFilter">Filtreaza dupa Model:</label>
                 <select id="modelFilter" name="model">
-                    <option value="">All Models</option>
+                    <option value="">Toate Modelele</option>
                     <option th:each="model : ${distinctModels}" th:value="${model}" th:text="${model}"></option>
                 </select>
 
-                <label for="capacitateCilindricaFilter">Filter by Cylindrical Capacity:</label>
+                <label for="capacitateCilindricaFilter">Filtreaza dupa Capacitatea Cilindrica:</label>
                 <select id="capacitateCilindricaFilter" name="capacitateCilindrica">
-                    <option value="">All Capacities</option>
+                    <option value="">Toate Capacitatile</option>
                     <option th:each="capacitateCilindrica : ${distinctCapacitateCilindrica}" th:value="${capacitateCilindrica}" th:text="${capacitateCilindrica}"></option>
                 </select>
-                <button type="submit" style="margin-top: 15px;">Apply Filters</button>
+                <button type="submit" style="margin-top: 15px;">Filtreaza</button>
             </form>
 
 
