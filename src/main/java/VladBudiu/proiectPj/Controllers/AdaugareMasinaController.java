@@ -29,7 +29,7 @@ public class AdaugareMasinaController {
     }
 
     @PostMapping("/addCar")
-    public String adaugareMasina(@ModelAttribute("masina") Masina car, Model model,
+    public String adaugareMasina(@ModelAttribute("masina") Masina car,
                                  HttpSession session, RedirectAttributes redirectAttributes)
     {
         String registrationNumber = car.getNumarInmatriculare().toUpperCase();
